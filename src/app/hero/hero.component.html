@@ -1,0 +1,9 @@
+<app-header></app-header>
+<div class="main-container">
+    <img src="{{mainImageUrl}}" alt="main-image" (load)="onImageLoad()">
+    <app-custom-button></app-custom-button>
+</div>
+<div class="loading-page" *ngIf="loading">
+    <app-loader></app-loader>
+</div>
+

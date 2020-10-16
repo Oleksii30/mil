@@ -1,0 +1,39 @@
+$bgColor:#112222;
+$block-height:100vh;
+$block-width:80px;
+
+.header{
+    background-color:$bgColor;    
+    width: 80px;  
+    height: $block-height;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .fake-div{
+        width: 40px;
+        height: 30%;
+    }
+}    
+
+    .navigation-menu{
+        transition: width 1s ease-in-out;
+        width: 0;
+        height: $block-height;
+        background-color:$bgColor; 
+        position: fixed;
+        right: $block-width;
+        top: 0;
+        display: flex;
+        align-items: center; 
+        z-index: 1;       
+    }
+    .expand{
+        width: 150px;
+    }
+

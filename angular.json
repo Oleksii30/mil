@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mil"
+    }
+  },
+  "defaultProject": "mil",
+  "cli": {
+    "analytics": "0b9c1456-39f0-48df-912c-241a2bbbf25f"
+  }
 }

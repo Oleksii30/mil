@@ -1,0 +1,32 @@
+$textColor: #AAE6E7;
+$lineColor:#FDD3D5;
+$lColor: #FAF61D;
+
+.item-container{
+    height: 40px;
+    padding-left: 20px;
+
+    & .list-item{
+        font-size: 1.2rem;
+        color: $textColor;        
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.7;        
+        }
+    }
+    & .line{
+        opacity: 0;
+        width: 0px;    
+        border: 1.5px solid $lColor;
+        background-color:$lColor;   
+        transition: all 0.5s ease-in-out;     
+    }
+    & .long-line{
+        opacity: 1;
+        width: 120px;
+        border: 1.5px solid $lColor;  
+        background-color: $lColor; 
+        transition: all 0.5s ease-in-out;    
+    }
+}

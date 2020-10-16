@@ -1,0 +1,15 @@
+<div class="header">  
+    <app-logo></app-logo>
+    <app-burger-button (click)="toggleButton()" [toggler]="toggler"></app-burger-button>
+    <div class="fake-div"></div>
+</div>
+    <div class="navigation-menu" [class.expand]="toggler">
+        <div *ngIf="toggler">
+            <app-nav-item [title]="'Про нас'"></app-nav-item>
+            <app-nav-item [title]="'Викладачі'"></app-nav-item>
+            <app-nav-item [title]="'Курси'"></app-nav-item>
+            <app-nav-item [title]="'Контакти'"></app-nav-item>
+                  
+        </div>
+    </div>  
+

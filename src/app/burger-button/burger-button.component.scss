@@ -1,0 +1,44 @@
+.burger-button{
+  width: 80px;  
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+  svg{
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      transform: translate3d(0,0,0);     
+  }
+    path{
+      fill: none;
+      transition: stroke-dashoffset .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke-dasharray .5s cubic-bezier(0.250,-0.250, 0.750, 1.250);
+      stroke-width: 35px;
+      stroke-linecap: round;
+      stroke: #AAE6E7;
+      stroke-dashoffset: 0px;
+    }
+  
+   
+    #top {
+      stroke-dasharray: 240px 950px;
+    }
+    #bottom {
+      stroke-dasharray: 240px 950px;
+    }
+    
+    #middle{
+        stroke-dasharray: 240px 240px;  
+    }
+    
+  .cross svg #top{
+    stroke-dashoffset: -650px
+  }
+  .cross svg #bottom{
+    stroke-dashoffset: -650px
+  }    
+  .cross svg #middle{
+    stroke-dashoffset: -115px;
+    stroke-dasharray: 1px 220px;
+  }       

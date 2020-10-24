@@ -1,0 +1,17 @@
+<app-header [animations]="finishedLoading"></app-header>
+<div class="main-container">
+    <img src="{{mainImageUrl}}" alt="main-image" (load)="onImageLoad()">    
+    <div class="brush">
+        <h1> <span>Mil pasos</span></h1>
+        <h1><span class="text-sec">Студія іноземних мов</span></h1>
+    </div>
+</div>
+<div 
+    class="loading-page" 
+    *ngIf="loading" 
+    [@loader]
+    (@loader.done)="onLeave($event)"
+    >
+    <app-loader></app-loader>
+</div>
+

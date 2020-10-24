@@ -3,11 +3,11 @@ $lineColor:#FDD3D5;
 $lColor: #FAF61D;
 
 .item-container{
-    height: 40px;
-    padding-left: 20px;
-
+    height: 4rem;
+    padding-left: 2rem;
+    
     & .list-item{
-        font-size: 1.2rem;
+        font-size: 2rem;
         color: $textColor;        
         cursor: pointer;
 
@@ -24,7 +24,7 @@ $lColor: #FAF61D;
     }
     & .long-line{
         opacity: 1;
-        width: 120px;
+        width: 12rem;
         border: 1.5px solid $lColor;  
         background-color: $lColor; 
         transition: all 0.5s ease-in-out;    

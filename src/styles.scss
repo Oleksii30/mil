@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    font-family: 'Mulish', sans-serif;
-    margin: -10px -10px; 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+       
+}
+html{
+    font-size: 62.5%; 
+}
+
+body{    
+    font-family: 'Noto Sans KR', sans-serif;
 }

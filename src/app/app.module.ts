@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroComponent } from './hero/hero.component';
-import { HeaderComponent } from './header/header.component';
-import { BurgerButtonComponent } from './burger-button/burger-button.component';
-import { LogoComponent } from './logo/logo.component';
-import { NavItemComponent } from './nav-item/nav-item.component';
-import { CustomButtonComponent } from './custom-button/custom-button.component';
-import { LoaderComponent } from './loader/loader.component';
-import { AboutePageComponent } from './aboute-page/aboute-page.component';
+import { HeroComponent } from './pages/hero/hero.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BurgerButtonComponent } from './components/burger-button/burger-button.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { NavItemComponent } from './components/nav-item/nav-item.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { AboutePageComponent } from './pages/aboute-page/aboute-page.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +19,14 @@ import { AboutePageComponent } from './aboute-page/aboute-page.component';
     HeaderComponent,
     BurgerButtonComponent,
     LogoComponent,
-    NavItemComponent,
-    CustomButtonComponent,
+    NavItemComponent,   
     LoaderComponent,
     AboutePageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,52 @@
+$brushUrl: "https://lh3.googleusercontent.com/Knn9vsRoGTQ-xx9PH1LqUxm-3lmyXH8KN_QWz_eucj349VjAdkx1laoqznTDBtFznSniPvvNpw_4mSj3uuokLn2qtOuQWpjTf8lOaWnF_GQFx1bXxDy43ZzYwjuzFuPGk6I5v0m2zw=w2400";
+
+.main-container{
+    position: relative; 
+    width: 100vw;
+    height: auto;
+    
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    .brush{
+        background-image: url($brushUrl);
+        background-size: cover;
+        background-position: top;
+        background-size: 35rem;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 13rem;
+        left: 5rem;
+        width: 35rem; 
+        height: 14rem; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;       
+       
+        h1{
+            font-weight: 400;
+            font-size: 3.8rem;
+            color: #112222;           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text-sec{
+                font-weight: 300;
+                font-size: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    }
+}
+.loading-page{
+    position: fixed;  
+    left: 0;
+    top: 0;
+    right: 0;  
+    bottom: 0;
+    z-index: 3;
+    background-color: #112222;
+}

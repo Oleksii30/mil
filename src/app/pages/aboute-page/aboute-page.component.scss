@@ -1,22 +1,11 @@
 .main{
     position: relative;
-    height: 800px;
+    height: 85rem;
     width: 100vw;
-    background-color: #112222;
-    margin-top: -10px;   
-
-    &:after{
-        position: absolute;
-        content: '';
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        background-color:  #112222;
-        transform-origin: top left;
-        transform: skewY(4deg);
-    }
+    background-color: #112222;    
+    margin-top: -.4rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+   
     .container-photo1{
         width: 100vw;
         padding-top: 1%;        
@@ -33,17 +22,23 @@
         }
         .text-block-1 {
             margin-left: 5%;
-
+            padding-top: 2%;
+            
             h3{
-                font-size: 2rem;
+                font-size: 3rem;
                 color:#FAF61D;
+                padding-bottom: 8%;
             }
-            li{
-                font-size: 1.5rem;
-                color: #FAF61D;
+            ul{
+                padding-left: 2.5rem;
+                li{
+                    font-size: 2.5rem;
+                    color: #FAF61D;
+                }
             }
+            
             p{
-                font-size: 1.5rem;
+                font-size: 2.5rem;
                 color: #FAF61D;
                 padding-top: 8%;
             }
@@ -69,7 +64,7 @@
             flex-direction: column;
 
             .text{
-                font-size: 1.5rem;
+                font-size: 2.5rem;
                 color: #AAE6E7;
                 padding-top: 5%;
             }

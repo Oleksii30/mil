@@ -1,32 +1,32 @@
-$textColor: #AAE6E7;
-$lineColor:#FDD3D5;
-$lColor: #FAF61D;
+@import "../../styles/variables";
+
+@mixin line {
+    border: 1.5px solid $color-main-yellow;  
+    background-color: $color-main-yellow; 
+    transition: all 0.5s ease-in-out;  
+}
 
 .item-container{
     height: 4rem;
     padding-left: 2rem;
     
-    & .list-item{
+    .list-item{
         font-size: 2rem;
-        color: $textColor;        
+        color: $color-main-blue;        
         cursor: pointer;
 
         &:hover{
             opacity: 0.7;        
         }
     }
-    & .line{
+    .line{
         opacity: 0;
         width: 0px;    
-        border: 1.5px solid $lColor;
-        background-color:$lColor;   
-        transition: all 0.5s ease-in-out;     
+        @include line;      
     }
-    & .long-line{
+    .long-line{
         opacity: 1;
         width: 12rem;
-        border: 1.5px solid $lColor;  
-        background-color: $lColor; 
-        transition: all 0.5s ease-in-out;    
+        @include line;  
     }
 }

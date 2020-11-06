@@ -1,14 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-       
-}
-html{
-    font-size: 62.5%; 
-}
+@import "./app/styles/base";
+@import "./app/styles/grid";
+@import "./app/styles/utilities";
+@import "./app/styles/components";
 
-body{    
-    font-family: 'Noto Sans KR', sans-serif;
-}
+
+
+
+
+
+

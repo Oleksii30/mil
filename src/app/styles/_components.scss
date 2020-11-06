@@ -1,0 +1,23 @@
+@import './variables';
+
+.btn{
+    cursor: pointer;
+    font-size: 1.9rem;
+    font-weight: 400;
+    width: fit-content;
+    padding: 0.9rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-main-dark, .45);    
+    transition: all .4s;
+    
+    &:hover{
+        transform: translateY(-3px);
+    }
+    &:active{
+        transform: translateY(0);
+    }
+
+    &__grey{
+        color:$color-main-dark;
+        background-color:$color-grey-light;       
+    }
+}

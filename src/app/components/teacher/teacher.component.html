@@ -1,0 +1,49 @@
+
+<div class="main" (scroll)="onScroll($event)">  
+        
+    
+    <div class="row">
+        <div class="col-8 teacher-block u-padding-bottom-medium">
+            <div class="row">
+                <div class="heading-container">
+                    <div class="heading-content">
+                        <h1>{{teacher.name}}</h1>
+                        <h1>{{teacher.header}}</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5">                                     
+                    <img src="{{teacher.avatar.first}}" alt="first-photo">
+                </div>
+                <div class="col-5">
+                    <p>{{teacher.description[0]}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <p>{{teacher.description[1]}}</p>                
+                </div>
+                <div class="col-4">
+                    <img src="{{teacher.avatar.second}}" alt="second-photo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <img src="{{teacher.avatar.third}}" alt="third-photo">
+                </div>
+                <div class="col-5">
+                    <p>{{teacher.description[2]}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="quote-container">                   
+                    <h2>{{teacher.quote}}</h2>                        
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</div>
+
+

@@ -1,9 +1,10 @@
-$bgColor:#112222;
+@import "../../styles/variables";
+
 $block-height:100vh;
 $block-width:8rem;
 
 .header{
-    background-color:$bgColor;    
+    background-color:$color-main-dark;    
     width: 0px;  
     height: $block-height;
     position: fixed;
@@ -24,14 +25,13 @@ $block-width:8rem;
     .navigation-menu{
         width: 0;
         height: $block-height;
-        background-color:$bgColor; 
+        background-color:$color-main-dark; 
         position: fixed;
         right: $block-width;
         top: 0;
         display: flex;
         align-items: center; 
-        z-index: 1;         
-       
+        z-index: 1;  
     }
   
 

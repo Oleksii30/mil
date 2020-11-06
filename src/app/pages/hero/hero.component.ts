@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {
   trigger,  
   animate,
-  transition  
+  transition,
+  state,
+  style,
+  keyframes
 } from '@angular/animations';
 
 @Component({
@@ -12,9 +15,39 @@ import {
   animations:[
     trigger('loader', [
       transition(':leave', [
-        animate('2.5s ease-out')
+        animate('.1s ease-out')
       ])
-    ])
+    ]),
+    /*trigger('name1',[
+      state('start', style({
+        transform:'translateX(-8rem)',
+        opacity:0
+      })),
+      state('end', style({
+        transform:'translateX(0)',
+        opacity:1
+      })),
+      transition('start  => end', animate('1s ease-in', keyframes([
+        style({ transform:'translateX(-8rem)', opacity:0, offset:0}),
+        style({ transform:'translateX(2rem)', opacity:1, offset:0.9}),
+        style({ transform:'translateX(0)', opacity:1, offset:1}),
+      ])))
+    ]),
+    trigger('name2',[
+      state('start', style({
+        transform:'translateX(8rem)',
+        opacity:0
+      })),
+      state('end', style({
+        transform:'translateX(0)',
+        opacity:1
+      })),
+      transition('start  => end', animate('1s ease-in', keyframes([
+        style({ transform:'translateX(8rem)', opacity:0, offset:0}),
+        style({ transform:'translateX(-2rem)', opacity:1, offset:0.9}),
+        style({ transform:'translateX(0)', opacity:1, offset:1}),
+      ])))
+    ])*/
   ]
 })
 export class HeroComponent implements OnInit {

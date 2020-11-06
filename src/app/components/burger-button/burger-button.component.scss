@@ -1,36 +1,44 @@
+@import "../../styles/variables";
+
+@mixin path {
+  fill: none;
+  transition: stroke-dashoffset .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke-dasharray .5s cubic-bezier(0.250,-0.250, 0.750, 1.250);
+  stroke-width: 35px;
+  stroke-linecap: round;
+  stroke:$color-main-blue;
+  stroke-dashoffset: 0px;
+}
+
 .burger-button{
   width: 8rem;  
   height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;  
- }
+
   svg{
-      width: 100%;
-      height: auto;
-      cursor: pointer;
-      transform: translate3d(0,0,0);     
-  }
-    path{
-      fill: none;
-      transition: stroke-dashoffset .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke-dasharray .5s cubic-bezier(0.250,-0.250, 0.750, 1.250);
-      stroke-width: 35px;
-      stroke-linecap: round;
-      stroke: #AAE6E7;
-      stroke-dashoffset: 0px;
-    }
-  
-   
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transform: translate3d(0,0,0);  
+    
     #top {
+      @include path;
       stroke-dasharray: 240px 950px;
     }
     #bottom {
+      @include path;
       stroke-dasharray: 240px 950px;
     }
     
     #middle{
-        stroke-dasharray: 240px 240px;  
+      @include path;
+      stroke-dasharray: 240px 240px;  
     }
+
+  }
+}   
+    
     
   .cross svg #top{
     stroke-dashoffset: -650px

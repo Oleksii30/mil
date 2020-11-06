@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 $brushUrl: "https://lh3.googleusercontent.com/Knn9vsRoGTQ-xx9PH1LqUxm-3lmyXH8KN_QWz_eucj349VjAdkx1laoqznTDBtFznSniPvvNpw_4mSj3uuokLn2qtOuQWpjTf8lOaWnF_GQFx1bXxDy43ZzYwjuzFuPGk6I5v0m2zw=w2400";
 
 .main-container{
@@ -29,10 +30,18 @@ $brushUrl: "https://lh3.googleusercontent.com/Knn9vsRoGTQ-xx9PH1LqUxm-3lmyXH8KN_
         h1{
             font-weight: 400;
             font-size: 3.8rem;
-            color: #112222;           
+            //color: $color-main-dark;           
             display: flex;
             align-items: center;
             justify-content: center;
+            
+            span{
+                display: inline-block;
+                background-image: linear-gradient(to right, rgba($color-main-dark,.6), rgba($color-main-dark, 1));
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+
             .text-sec{
                 font-weight: 300;
                 font-size: 3rem;
@@ -48,5 +57,5 @@ $brushUrl: "https://lh3.googleusercontent.com/Knn9vsRoGTQ-xx9PH1LqUxm-3lmyXH8KN_
     right: 0;  
     bottom: 0;
     z-index: 3;
-    background-color: #112222;
+    background-color: $color-main-dark;
 }

@@ -1,8 +1,25 @@
-<div class="row u-margin-top-big">
-    <div class="col-8 cards-container">
-        <app-course-card *ngFor="let course of courses" [course] = "course"></app-course-card> 
+<div class="main">
+    <div class="row heading">
+        <h1>Курси</h1>
+    </div>
+    <div class="row u-margin-top-big">        
+        <div class="col-8 cards-container">
+            <div *ngFor="let course of courses">
+                <app-course-card  [course] = "course" *ngIf="course.lenguage==='Іспанська'"></app-course-card>                 
+            </div>
+            <div *ngFor="let course of courses">                
+                <app-course-card  [course] = "course" *ngIf="course.lenguage==='Англійська'"></app-course-card> 
+            </div>
+            
+        </div>
+    </div>
+    <div class="row u-margin-top-big u-padding-bottom-medium">        
+        <div class="col-8 questions-container">
+            <app-accordeon *ngFor="let question of questions" [question] = "question" appScrollAnimation eleAnimation="slide_in_bottom" delay='0.2s'></app-accordeon> 
+        </div>
     </div>
 </div>
+
 
 
 

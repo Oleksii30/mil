@@ -1,41 +1,91 @@
 @import "../../styles/variables";
 
 .main{
-    position: relative;
-    height: 85rem;
-    width: 100vw;
+    position: relative;    
+    width: 100%;
     background-color:$color-main-dark;    
     margin-top: -.4rem;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+    color: $color-grey-light;        
+    padding-bottom: 8rem;
 }  
-
-img{
-    width: 100%;
-}  
-
-.text{
-    font-size: $font-size-medium;
-    color: $color-main-blue;
-    padding-top: 5%;   
+.row{
+    justify-content: flex-start;
+    padding: 2rem;
 }
-
 h3{
-    font-size: $font-size-large;
-    color:$color-main-blue;
-    padding-bottom: 8%;
+    font-size: $font-size-large; 
+    font-weight: 500;   
 }
 
-ul{
-    padding-left: $font-size-medium;
-    li{
-        font-size: $font-size-medium;
-        color: $color-main-blue;
+.photo-1{
+    width: 90%;
+} 
+.photo-2{
+    width: 85%;
+}
+p{
+    font-size: $font-size-medium;
+    line-height: 3.5rem;
+    color: $color-main-blue;   
+}
+
+.quote{    
+    width: 45%;
+    font-family: 'Special Elite', cursive;    
+    line-height: 3.5rem;
+
+    p{
+        margin-top: 10rem;
+        color: $color-grey-light;
     }
 }
 
-p{
-    font-size: $font-size-medium;
-    color:$color-main-blue;
-    padding-top: 8%;
+
+.medium-row{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    ul{
+        display: block;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        li{
+            display: inline-block;
+            font-size: $font-size-medium; 
+            
+            .icon-block{
+
+                width: 22rem;
+                height: 20rem;
+                border: 2px solid $color-main-blue;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding:1rem;
+
+                .icon{
+                    width: 10rem;
+                    height: auto;
+                    margin-top: 1rem;
+                }
+                .icon-text{
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
 

@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+
+.story{
+    margin: 0 auto;
+    margin-bottom:2rem;
+    width: 80%;    
+    background-color:rgba(white, .7);
+    box-shadow: 0 3rem 6rem rgba(black, .1);
+    border-radius: 3px;
+    transform: skewX(-12deg);
+    padding-right: 6rem;
+    padding-left: 7rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;   
+    
+    &__shape{
+        width: 15rem;
+        height: 15rem; 
+        transform: skewX(12deg) translateX(-1rem);
+        float: left;
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        //clip-path: circle(50% at 50% 50%);
+        //-webkit-clip-path:circle(50% at 50% 50%);
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;        
+    }
+    &__img{
+        height: 100%; 
+        transform: scale(1.2); 
+        transition: all .5s;      
+    }
+    &__text{
+        height: 15rem;
+        transform: skewX(12deg);
+        font-size: 1.5rem; 
+              
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    &:hover &__img{
+        transform: scale(1);
+        filter:blur(3px) brightness(80%);
+    }
+}
+

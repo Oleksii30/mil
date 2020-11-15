@@ -3,52 +3,60 @@ $brushUrl: "https://lh3.googleusercontent.com/Knn9vsRoGTQ-xx9PH1LqUxm-3lmyXH8KN_
 
 .main-container{
     position: relative; 
-    width: 100vw;
+    width: 100%;
     height: auto;
+    font-family: 'Varela Round', sans-serif;
     
-    img{
-        width: 100%;
-        height: auto;
-    }
-
-    .brush{
-        background-image: url($brushUrl);
-        background-size: cover;
-        background-position: top;
-        background-size: 35rem;
-        background-repeat: no-repeat;
+    .bg-gradient{
         position: absolute;
-        top: 13rem;
-        left: 5rem;
-        width: 35rem; 
-        height: 14rem; 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;       
-       
-        h1{
-            font-weight: 400;
-            font-size: 3.8rem;
-            //color: $color-main-dark;           
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            105deg,
+            rgba($color-main-dark, 1) 0%,
+            rgba($color-main-dark, 1) 25%,
+            transparent 25%); 
+        .headers{
+            position: absolute;
+            left: 2rem;
+            top: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            
-            span{
-                display: inline-block;
-                background-image: linear-gradient(to right, rgba($color-main-dark,.6), rgba($color-main-dark, 1));
-                -webkit-background-clip: text;
-                color: transparent;
-            }
-
-            .text-sec{
-                font-weight: 300;
+            flex-direction: column;
+            h1{            
+                color: $color-main-blue;
+                font-size: 6rem;
+                font-weight: 500;
+            }    
+            p{
+                color: $color-main-blue;
                 font-size: 3rem;
-                padding-bottom: 3rem;
+            }  
+        }
+        .icons{
+            position: absolute;
+            display: flex;
+            left: .5rem;
+            bottom: 8rem;
+
+
+            .icon:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+            .icon{
+                width: 5rem;
+                height: 5rem;
             }
         }
-    }
+        
+        
+    }       
+    img{
+        width: 100%;        
+    }   
 }
 .loading-page{
     position: fixed;  

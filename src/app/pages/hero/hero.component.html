@@ -1,10 +1,20 @@
 <app-header [animations]="finishedLoading"></app-header>
 <div class="main-container">
-    <img src="{{mainImageUrl}}" alt="main-image" (load)="onImageLoad()">    
-    <div class="brush">
-        <h1> <span>Mil pasos</span></h1>
-        <h1><span class="text-sec">Студія іноземних мов</span></h1>
-    </div>
+    <img src="{{mainImageUrl}}" alt="main-image" (load)="onImageLoad()"> 
+    <div class="bg-gradient">
+        <div class="headers">
+            <h1> Mil pasos</h1>
+            <p> Студія іноземних мов</p>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <app-fb-icon></app-fb-icon>
+            </div>
+            <div class="icon">
+                <app-insta-icon></app-insta-icon>
+            </div>
+        </div>        
+    </div>    
 </div>
 <div 
     class="loading-page" 

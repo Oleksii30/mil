@@ -1,1 +1,41 @@
-<p>story-page works!</p>
+
+    <div class="stories">
+        <div class="row u-margin-top-small heading">
+            <h2>Історії наших учнів</h2>
+        </div>
+        <!--<div class="bg-video">    
+            <video class="bg-video__content" autoplay muted loop>
+                <source src="../../../assets/v4.mp4" type="video/mp4"> 
+                Your browser is non suported       
+            </video>            
+        </div>-->
+        <div class="video-background">
+            <div class="video-foreground">
+              <iframe src="https://www.youtube.com/embed/kHzWwp8ptiw?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=kHzWwp8ptiw" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+            </div>
+        </div>	  
+           
+        <div class="stories__section" *ngIf="stories">            
+            <div class="swiper-container" [swiper]="config">
+                <div class="swiper-wrapper">
+                  <div *ngFor="let story of stories" class="swiper-slide">
+                    <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+                        <app-story [story]="story"></app-story>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="swiper-scrollbar" [hidden]="config.scrollbar === false"></div>
+                <div class="swiper-pagination" [hidden]="config.pagination === false"></div>      
+                
+            </div>            
+        </div> 
+        <div class="row u-margin-top-medium">
+            <a href="https://facebook.com/stanwilliamsmusic" target="_blank" class="zocial facebook"> Залишити відгук на нашій Facebook сторінці &nbsp; &nbsp;</a>
+        </div>
+        
+    </div>
+
+    
+    
+

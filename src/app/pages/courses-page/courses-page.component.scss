@@ -1,11 +1,30 @@
 @import "../../styles/variables";
 
+.main{
+    margin-top: -20rem;
+    background-color: $color-grey-light;
+    .heading{
+        padding-top: 28rem;
+        h1{
+            color: $color-main-dark;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 5rem;
+            font-weight: 500;
+        }
+    }
+    .row{        
+        width: 100%;          
+    }
+}
+
+
 .cards-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.row{
-    width: 100%; 
-    background-color: $color-grey-light;   
+.questions-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

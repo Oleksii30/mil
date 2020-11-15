@@ -1,6 +1,5 @@
 
-<div class="main" (scroll)="onScroll($event)">  
-        
+<div class="main">         
     
     <div class="row">
         <div class="col-8 teacher-block u-padding-bottom-medium">
@@ -14,26 +13,26 @@
             </div>
             <div class="row">
                 <div class="col-5">                                     
-                    <img src="{{teacher.avatar.first}}" alt="first-photo">
+                    <img src="{{teacher.avatar.first}}" alt="first-photo" appScrollAnimation eleAnimation="slide_in_bottom" >
                 </div>
                 <div class="col-5">
-                    <p>{{teacher.description[0]}}</p>
+                    <p appScrollAnimation eleAnimation="slide_in_bottom" delay='0.3s'>{{teacher.description[0]}}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-5">
-                    <p>{{teacher.description[1]}}</p>                
+                    <p appScrollAnimation eleAnimation="slide_in_bottom" delay='0.3s'>{{teacher.description[1]}}</p>                
                 </div>
                 <div class="col-4">
-                    <img src="{{teacher.avatar.second}}" alt="second-photo">
+                    <img src="{{teacher.avatar.second}}" alt="second-photo" appScrollAnimation eleAnimation="slide_in_bottom" delay='0.1s'>
                 </div>
             </div>
             <div class="row">
                 <div class="col-5">
-                    <img src="{{teacher.avatar.third}}" alt="third-photo">
+                    <img src="{{teacher.avatar.third}}" alt="third-photo" appScrollAnimation eleAnimation="slide_in_bottom" delay='0.1s'>
                 </div>
                 <div class="col-5">
-                    <p>{{teacher.description[2]}}</p>
+                    <p appScrollAnimation eleAnimation="slide_in_bottom" delay='0.3s'>{{teacher.description[2]}}</p>
                 </div>
             </div>
             <div class="row">

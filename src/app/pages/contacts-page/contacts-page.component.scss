@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.main{    
+    background-color: $color-grey-light;
+    //height: 50rem;
+    padding-bottom: 2rem;
+    .heading{
+        padding-top: 5rem;
+        h1{
+            color: $color-main-dark;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 5rem;
+            font-weight: 500;           
+        }
+    }
+    .row{        
+        width: 100%;         
+    }
+    .map{
+        height: 40rem;
+        position: relative;
+
+        app-map{
+            position: absolute;
+            top: 0;
+            left: 2rem;
+        }      
+    }
+}

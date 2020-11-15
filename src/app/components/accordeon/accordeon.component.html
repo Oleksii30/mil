@@ -1,0 +1,7 @@
+<div class="question" (click)="open()">
+    <span>{{question.question}}</span>  
+    <span class="close" [@accordeonX]="accHeightState">&times;</span>
+</div>
+<div class="answer" [@accordeonH]="accHeightState" (@accordeonH.done)="onAccOpen($event)">
+    <span [@accordeonO]="accOpacityState" (@accordeonO.done)="onTextSowen($event)">{{question.answer}}</span>
+</div>

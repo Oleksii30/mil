@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+
+.question{
+    width: 70%;
+    height: 7rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-main-dark;
+    font-size: $font-size-medium;
+    border: 2px solid $color-main-dark;
+    cursor: pointer;
+    position: relative;
+    margin: 0 auto;
+    //margin-bottom: .5rem;
+    z-index: 1;
+
+    span{
+        cursor: pointer;
+    }
+
+    .close{
+        position: absolute;
+        right: 1rem;
+        font-size: 3rem;
+        transform: rotate(45deg);
+    }
+}
+
+.answer{
+    max-height: 18rem;
+    width: 70%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: $color-main-dark;
+    font-size: $font-size-small;       
+    margin: 0 auto;    
+    padding: 0;    
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;  
+         
+    span{
+        padding: 1rem;
+    }
+}

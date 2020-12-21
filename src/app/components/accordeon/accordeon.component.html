@@ -1,5 +1,5 @@
-<div class="question" (click)="open()">
-    <span>{{question.question}}</span>  
+<div class="question" (click)="open()" appScrollAnimation eleAnimation="slide_in_bend" [delay]="delay">
+    <span class="question-text">{{question.question}}</span>  
     <span class="close" [@accordeonX]="accHeightState">&times;</span>
 </div>
 <div class="answer" [@accordeonH]="accHeightState" (@accordeonH.done)="onAccOpen($event)">

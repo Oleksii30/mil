@@ -18,7 +18,7 @@ export class StoriesService {
   }
 
   getStoriesFromServer(){
-    this.http.get('http://localhost:3000/reviews').subscribe((stories:Array<Story>) => {
+    this.http.get('https://mil-pasos.herokuapp.com/reviews').subscribe((stories:Array<Story>) => {
       this.stories = stories
       this.storiesSub.next([...this.stories])
     })

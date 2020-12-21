@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+
+.popup{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgba(black, .8);
+    z-index: 50000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    
+
+    &__content{      
+        position: absolute;
+        top: 50%;
+        left: 50%;        
+        background-color: white;        
+        box-shadow: 0 2rem 4rem rgba(black, .2);
+        border-radius: 3px;        
+        overflow: hidden;
+        opacity: 1;
+        transform:translate(-50%, -50%) scale(.5);
+        transition: all .4s;
+    }      
+  
+
+    &__close{
+            color: $color-main-dark;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 3rem;            
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+            cursor: pointer;
+
+        
+        &:hover{
+            color: $color-main-blue;
+        }
+    }
+}
+
+.visible{
+    opacity: 1;
+    visibility: visible;
+}
+.visible-content{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}

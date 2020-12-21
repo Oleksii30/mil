@@ -18,7 +18,7 @@ export class QuestionsService {
   }
 
   getQuestionsFromServer(){
-    this.http.get('http://localhost:3000/questions').subscribe((questions:Array<Question>) => {
+    this.http.get('https://mil-pasos.herokuapp.com/questions').subscribe((questions:Array<Question>) => {
       this.questions = questions
       this.questionsSub.next([...this.questions])
     })

@@ -6,6 +6,8 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { AgmCoreModule } from '@agm/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,20 +28,27 @@ import { SliderComponent } from './components/slider/slider.component';
 import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
 import { FbIconComponent } from './components/fb-icon/fb-icon.component';
 import { InstaIconComponent } from './components/insta-icon/insta-icon.component';
-import { SleepIconComponent } from './components/sleep-icon/sleep-icon.component';
 import { EngIconComponent } from './components/eng-icon/eng-icon.component';
-import { HipnIconComponent } from './components/hipn-icon/hipn-icon.component';
 import { MagIconComponent } from './components/mag-icon/mag-icon.component';
 import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ArrIconComponent } from './components/arr-icon/arr-icon.component';
 import { MapComponent } from './components/map/map.component';
 import { AccordeonComponent } from './components/accordeon/accordeon.component';
+import { PopupComponent } from './components/popup/popup.component';
+import { FormComponent } from './components/form/form.component';
+import { BuildIconComponent } from './components/build-icon/build-icon.component';
+import { VideoIconComponent } from './components/video-icon/video-icon.component';
+import { TravelIconComponent } from './components/travel-icon/travel-icon.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
 };
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 
 @NgModule({
@@ -61,16 +70,20 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SliderComponent,
     ScrollAnimationDirective,
     FbIconComponent,
-    InstaIconComponent,
-    SleepIconComponent,
-    EngIconComponent,
-    HipnIconComponent,
+    InstaIconComponent,    
+    EngIconComponent,   
     MagIconComponent,
     ContactsPageComponent,
     FooterComponent,
     ArrIconComponent,
     MapComponent,
-    AccordeonComponent,  
+    AccordeonComponent,
+    PopupComponent,
+    FormComponent,
+    BuildIconComponent,   
+    VideoIconComponent,
+    TravelIconComponent,
+    
     
     
   ],
@@ -82,8 +95,12 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAxbYT2V8CwJzpUQmr9VQxXNJXTRF6BLiI'
-    })
-  ],
+    }),
+    ReactiveFormsModule,
+    FormsModule,
+    NgxMaskModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ],
   providers: [
     {
       provide: SWIPER_CONFIG,

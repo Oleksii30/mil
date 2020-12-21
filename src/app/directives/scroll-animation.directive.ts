@@ -31,8 +31,8 @@ export class ScrollAnimationDirective implements AfterViewInit, OnInit{
         if (this.animateOnce){
           this.animate(this.delay, this.timing)
           this.animateOnce = false
-        }        
-        console.log('Scroll directive', this.eleAnimations)
+        }
+       
       }     
     })
     observer.observe(this.el.nativeElement)

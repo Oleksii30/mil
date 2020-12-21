@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SleepIconComponent } from './sleep-icon.component';
+import { TravelIconComponent } from './travel-icon.component';
 
-describe('SleepIconComponent', () => {
-  let component: SleepIconComponent;
-  let fixture: ComponentFixture<SleepIconComponent>;
+describe('TravelIconComponent', () => {
+  let component: TravelIconComponent;
+  let fixture: ComponentFixture<TravelIconComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SleepIconComponent ]
+      declarations: [ TravelIconComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SleepIconComponent);
+    fixture = TestBed.createComponent(TravelIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

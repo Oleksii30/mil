@@ -1,4 +1,29 @@
 agm-map {
-    height: 40rem;
-    width: 50rem;
+    height: 35rem;
+    width: 47.5rem;
+    @media(max-width: 75em){     
+      width: 45rem;
+    }
+   @media(max-width: 68.75em){      
+      width: 40rem;
+    }
+    @media(max-width: 48.75em){               
+      width: 60rem;
+     } 
+     @media(max-width: 37.5em){               
+      width: 55rem;
+     } 
+     @media(max-width: 35.8em){               
+      width: 50rem;
+     } 
+     @media(max-width: 32.5em){               
+      width: 45rem;
+     } 
+     @media(max-width: 22.25em){               
+      width: 42rem;
+     } 
+     @media(max-width: 20em){               
+      width: 40rem;
+     }   
+ 
   }

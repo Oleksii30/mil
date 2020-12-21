@@ -1,7 +1,7 @@
 
     <div class="stories">
         <div class="row u-margin-top-small heading">
-            <h2>Історії наших учнів</h2>
+            <h2 class="header-secondary">Історії наших учнів</h2>
         </div>
         <!--<div class="bg-video">    
             <video class="bg-video__content" autoplay muted loop>
@@ -17,7 +17,7 @@
            
         <div class="stories__section" *ngIf="stories">            
             <div class="swiper-container" [swiper]="config">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper">                   
                   <div *ngFor="let story of stories" class="swiper-slide">
                     <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
                         <app-story [story]="story"></app-story>
@@ -30,8 +30,8 @@
                 
             </div>            
         </div> 
-        <div class="row u-margin-top-medium">
-            <a href="https://facebook.com/stanwilliamsmusic" target="_blank" class="zocial facebook"> Залишити відгук на нашій Facebook сторінці &nbsp; &nbsp;</a>
+        <div class="row u-margin-top-small">
+            <a href="https://www.facebook.com/milpasosvinnytsia/reviews/?ref=page_internal" target="_blank" class="btn btn-blue"> Залиште відгук на нашій Facebook сторінці &nbsp; &nbsp;</a>
         </div>
         
     </div>

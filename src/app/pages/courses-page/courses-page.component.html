@@ -1,21 +1,20 @@
-<div class="main">
+<div class="main" id="courses">
     <div class="row heading">
-        <h1>Курси</h1>
+        <h1 class="header-primary">Курси</h1>
     </div>
-    <div class="row u-margin-top-big">        
-        <div class="col-8 cards-container">
-            <div *ngFor="let course of courses">
-                <app-course-card  [course] = "course" *ngIf="course.lenguage==='Іспанська'"></app-course-card>                 
-            </div>
-            <div *ngFor="let course of courses">                
-                <app-course-card  [course] = "course" *ngIf="course.lenguage==='Англійська'"></app-course-card> 
-            </div>
+    <div class="row u-margin-top-big courses">        
+        <div class="col-9 cards-container">
+            <div *ngFor="let course of courses; let i = index">
+                <app-course-card  [course] = "course" [index]="i"></app-course-card>                 
+            </div>            
             
         </div>
     </div>
     <div class="row u-margin-top-big u-padding-bottom-medium">        
         <div class="col-8 questions-container">
-            <app-accordeon *ngFor="let question of questions" [question] = "question" appScrollAnimation eleAnimation="slide_in_bottom" delay='0.2s'></app-accordeon> 
+            <div class="accordeon-block" *ngFor="let question of questions; let i = index">
+                <app-accordeon [question] = "question" [index]="i"></app-accordeon> 
+            </div>            
         </div>
     </div>
 </div>

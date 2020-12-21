@@ -2,28 +2,194 @@
 
 .main{    
     background-color: $color-grey-light;
-    //height: 50rem;
-    padding-bottom: 2rem;
+    height: 55rem;
+    width: 100%;   
+    padding-left: 3rem;
+    position: relative;
+
+    @media(max-width: 53em){               
+      background-color: $color-main-dark;
+     } 
+
+    @media(max-width: 37.5em){               
+      height: 52rem;
+     } 
     .heading{
-        padding-top: 5rem;
-        h1{
-            color: $color-main-dark;
-            font-family: 'Varela Round', sans-serif;
-            font-size: 5rem;
-            font-weight: 500;           
-        }
+        width: 100%;
+        padding-top: 5rem;          
+        display: flex;
+        justify-content: center; 
+        
+        @media(max-width: 37.5em){               
+          padding-top: 1rem;
+         } 
+        
     }
     .row{        
-        width: 100%;         
-    }
-    .map{
-        height: 40rem;
-        position: relative;
-
-        app-map{
-            position: absolute;
-            top: 0;
-            left: 2rem;
-        }      
-    }
+        width: 90%; 
+              
+    }    
 }
+
+.contacts{
+    width: 100%;
+    display: flex;
+    
+    position: relative;      
+    @media(max-width: 48.75em){               
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+     } 
+   
+    .map{      
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; 
+      @media(max-width: 63.4em){               
+        justify-content: flex-start;                     
+    }  
+    @media(max-width: 48.75em){               
+      width: 100%;
+      justify-content: center;
+     } 
+    }  
+   
+    
+    .info{        
+        position: relative;       
+        font-size: $font-size-medium;       
+        width: 100%;
+        padding-left: 16%;
+        color: $color-grey-light;
+        @media(max-width: 68.3em){           
+         
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+         } 
+         @media(max-width: 48.75em){               
+          padding-left: 0;
+         }   
+         @media(max-width: 22.25em){               
+          font-size: $font-size-small;
+         }   
+        
+    }  
+    .ofice-photos{
+        margin-top: 2rem;
+        width: 100%;
+        height: 80%;
+        display: flex; 
+        justify-content: center;        
+
+        @media(max-width: 48.75em){               
+          display: none;
+         } 
+       
+        .ofice-photo-1{ 
+            margin-left: -2rem;
+            width: 22.5rem;           
+            height: 32rem;
+            clip-path: polygon(0 50%, 20% 0, 100% 0, 100% 50%, 80% 100%, 0 100%);
+            background-size: cover;
+            background-image: url(https://lh3.googleusercontent.com/c_AoKyh6lWbXonh6BnfX24WbqoWYwsUFo9W0T5dVsIKlgWoGOxUmec_Rh54YxzqfnUMaUp5y59olwf96kjcXeSrozjpCdkdx1qBsGv7tuGGCSeduWSLQ3YvGYukoRh3na7414Zy6sw=w2400);
+            z-index: 1;
+
+            @media(max-width: 71.6em){                
+                width: 21rem;
+              }
+              @media(max-width: 68em){                
+                width: 20rem;
+                
+              }
+              @media(max-width: 64.75em){               
+                width: 19rem;
+              }
+             
+           
+        }
+        .ofice-photo-2{
+            margin-left: -4rem;
+            width: 22.5rem;           
+            height: 32rem;
+            clip-path: polygon(0 100%, 20% 50%, 20% 0, 100% 0, 100% 50%, 80% 100%);
+            background-size: cover;
+            background-image: url(https://lh3.googleusercontent.com/Alw_-efY_lrxv9x_ymAFNBI60jSLoASTakWWA0KqeeNEDIbI7CtnD0TNAymaAiFAQHdv-mYewDlde1lfFpkk1X9-GkVine2HlVijwu99XrBKmWnWKHq-lyWGDU0lrAK6fykqvuvTdw=w2400);
+            z-index: 1;
+            background-position:16%;
+
+            @media(max-width: 71.6em){                
+                width: 21rem;
+                
+              }
+              @media(max-width: 68em){                
+                width: 20rem;
+                margin-left: -3.5rem;
+              }
+              @media(max-width: 64.75em){               
+                width: 19rem;
+               
+              }
+             
+           
+        }
+        .ofice-photo-3{
+            margin-left: -4rem;
+            width: 22.5rem;           
+            height: 32rem;
+            clip-path: polygon(0 100%, 20% 50%, 20% 0, 100% 0, 100% 50%, 80% 100%);
+            background-size: cover;
+            background-image: url(https://lh3.googleusercontent.com/pbSEjXs5aMji_l5t9kOSJS4q7KTcWJ4k2WJvwjwZ6MqlfLQigoJ9wKHotgoA0ofnFfQIZp80hXoqw29cI3cdsW3ytalIE6TP_KSOv8k_91DNMW0IWFetqPacdA-VJEiPZ3-j5O6djg=w2400);
+            z-index: 1;
+            background-position:100%;
+
+            @media(max-width: 71.6em){                
+                width: 21rem;
+                
+              }
+              @media(max-width: 68em){                
+                width: 20rem;
+                margin-left: -3.5rem;
+              }
+              @media(max-width: 64.75em){               
+                width: 19rem;
+                left:32rem;
+              }
+              
+            
+        }
+    }   
+}
+.info-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end; 
+
+  @media(max-width: 48.75em){               
+    width: 100%;
+    margin-bottom: 1rem;
+   } 
+}
+
+
+.bg-gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-main-dark, 1) 0%,
+        rgba($color-main-dark, 1) 55%,
+        transparent 55%); 
+
+        @media(max-width: 53em){               
+            background-image:none;
+           } 
+}
+
+
+

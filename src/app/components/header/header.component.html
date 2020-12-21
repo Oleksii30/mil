@@ -17,10 +17,10 @@
         (@expand-menu.start)="startMenuAnimation($event)"
         >
         <div class="menu-items" *ngIf="toggler || menu">
-            <app-nav-item [title]="'Про нас'" [expandMenu]="showMenu" [delayIn]="'0.1s'" [delayOut]="'1.3s'"></app-nav-item>
-            <app-nav-item [title]="'Викладачі'" [expandMenu]="showMenu" [delayIn]="'0.5s'" [delayOut]="'0.9s'"></app-nav-item>
-            <app-nav-item [title]="'Курси'" [expandMenu]="showMenu" [delayIn]="'0.9s'" [delayOut]="'0.5s'"></app-nav-item>
-            <app-nav-item [title]="'Контакти'" [expandMenu]="showMenu" [delayIn]="'1.3s'" [delayOut]="'0.1s'"></app-nav-item>                             
+            <a href="#about"><app-nav-item [title]="'Про нас'" [expandMenu]="showMenu" [delayIn]="'0.1s'" [delayOut]="'1.3s'"></app-nav-item></a>
+            <a href="#teachers"><app-nav-item [title]="'Викладачі'" [expandMenu]="showMenu" [delayIn]="'0.5s'" [delayOut]="'0.9s'"></app-nav-item></a>
+            <a href="#courses"><app-nav-item [title]="'Курси'" [expandMenu]="showMenu" [delayIn]="'0.9s'" [delayOut]="'0.5s'"></app-nav-item></a>
+            <a href="#contacts"><app-nav-item [title]="'Контакти'" [expandMenu]="showMenu" [delayIn]="'1.3s'" [delayOut]="'0.1s'"></app-nav-item></a>                             
         </div>
     </div>  
 

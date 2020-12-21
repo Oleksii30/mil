@@ -1,0 +1,6 @@
+<div class="popup" [class.visible]="popupOpen">
+    <div class="popup__content" [class.visible-content]="popupOpen">
+        <span class="popup__close" (click)="close()">&times;</span>
+        <ng-content></ng-content>
+    </div>
+</div>

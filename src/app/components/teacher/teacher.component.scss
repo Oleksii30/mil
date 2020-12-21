@@ -1,10 +1,11 @@
 @import "../../styles/variables";
 
 .main{    
-    margin-top: 5rem;    
+    margin-top: 5rem;      
 }
 
-.teacher-block{    
+.teacher-block{   
+    min-height: 60rem;  
     background-color: $color-main-dark;
     transform: skewY(5deg);
 
@@ -14,12 +15,47 @@
 }
 img{
     width: 100%;   
+    @media (max-width:42.75em) { 
+        width: 80%;  
+        margin: 0 auto;
+    }; 
+    
+}
+.img{
+    @media (max-width:42.75em) { 
+        display: flex;
+        justify-content: center;  
+    }; 
 }
 .row{
-    width: 100%;    
+    width: 100%;  
+    @media (max-width:58.5em) { 
+        justify-content: flex-start; 
+    }; 
+    
+}
+.content{
+    flex-wrap: wrap;
+}
+.content-rew{
+    flex-wrap: wrap-reverse;
 }
 .col-5, .col-4{
-    padding: 2rem;    
+    padding: 2rem; 
+    min-width: 320px;  
+
+    @media (max-width:42.75em) { 
+        width: 93.5%;  
+    }; 
+    @media (max-width:22.25em) { 
+        min-width: 200px;
+    }; 
+}
+.col-8{
+    @media (max-width:58.5em) { 
+        width: 93.5%;  
+    };
+    
 }
 
 p{
@@ -37,6 +73,11 @@ p{
     display: flex;
     justify-content: flex-start;
 
+    @media (max-width:42.75em) { 
+        width: 93.5%;
+        padding: 1rem;  
+    }; 
+
     .heading-content{
         color: rgb(201, 192, 192);
         padding-left: 2rem;
@@ -49,5 +90,15 @@ p{
     padding-right: 2rem;
     display: flex;
     justify-content: flex-end;
-    color: rgb(201, 192, 192);   
+    color: rgb(201, 192, 192);  
+    
+    @media (max-width:42.75em) { 
+        width: 93.5%;
+        padding: 1rem;  
+    }; 
+}
+.not-mobile{
+    @media (max-width:30em) { 
+        display: none; 
+    }; 
 }

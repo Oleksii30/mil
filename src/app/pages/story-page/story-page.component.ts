@@ -16,7 +16,14 @@ export class StoryPageComponent implements OnInit, OnDestroy {
 
   @ViewChild(SwiperDirective, { static: false }) directiveRef?: SwiperDirective;
 
-  public stories:Array<Story>
+  public stories:Array<Story> 
+
+  public fakeStories:Array<Story> = new Array(2).fill({
+    name: '',
+    comment:'',
+    image:''
+  })
+
   public storySub:Subscription
 
   public config: SwiperOptions = {
@@ -47,9 +54,8 @@ export class StoryPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.storyService.getStoriesFromServer()
-    this.storySub = this.storyService.getStories.subscribe((stories:Array<Story>)=>{
+    this.storySub = this.storyService.getStories.subscribe((stories:Array<Story>)=>{      
       this.stories = stories
-      console.log('stories',this.stories);
       
     })
   }

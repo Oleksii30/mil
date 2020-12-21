@@ -1,10 +1,32 @@
+@import './mixins';
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;       
 }
 html{
-    font-size: 62.5%; 
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+        
+    @include respond(tab-land){
+        font-size: 56.25%;
+    }
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+    @media(max-width:30em){
+        font-size: 45%;
+    }
+    @media(max-width:26.3em){
+        font-size: 40%;
+    }
+    @media(max-width:23.5em){
+        font-size: 37%;
+    }
+    @include respond(big-desktop){
+        font-size: 75%;
+    }
 
     body{            
         font-family: 'Noto Sans KR', sans-serif;            

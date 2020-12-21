@@ -18,7 +18,7 @@ export class TeachersService {
   }
 
   getTeachersFromServer(){    
-   this.http.get('http://localhost:3000/teachers').subscribe((teachers:Array<Teacher>)=>{
+   this.http.get('https://mil-pasos.herokuapp.com/teachers').subscribe((teachers:Array<Teacher>)=>{
      this.teachers = teachers
      this.teachersSub.next([...this.teachers])     
    })

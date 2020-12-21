@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import '../../styles/mixins';
 
 .main{
     position: relative;    
@@ -8,36 +9,108 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
     color: $color-grey-light;        
     padding-bottom: 8rem;
+
+    @media (max-width:62.15em) { 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);        
+    };
+
+    @media (max-width:51em) { 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);        
+    };
+    @media (max-width:26.75em) { 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);        
+    };  
 }  
 .row{
     justify-content: flex-start;
-    padding: 2rem;
+    padding: 2rem;    
 }
-h3{
-    font-size: $font-size-large; 
-    font-weight: 500;   
+.first-row{
+    flex-wrap: wrap-reverse;
 }
+.col-5{
+    display: flex;
+    @media (max-width:49.75em) { 
+        width: 90%;
+        justify-content: center;        
+    }; 
+}
+
+
+.third{
+    flex-wrap: wrap;
+
+    @media (max-width:30em) { 
+        margin-top: 0;
+    }; 
+}
+.col-4{
+    min-width: 38rem;         
+}
+.col-4{
+    display: flex;
+    @media (max-width:48.75em) { 
+        width: 90%;
+        justify-content: center;
+        margin-top: 1rem;        
+    }; 
+    @media (max-width:20em) { 
+        width: 88%;            
+    };  
+}
+.col-6{
+    display: flex;
+    @media (max-width:48.75em) { 
+        width: 90%;
+        justify-content: flex-start;        
+    };  
+    @media (max-width:20em) { 
+        width: 88%;           
+    };  
+}
+
 
 .photo-1{
     width: 90%;
+    @media (max-width:49.75em) { 
+        width: 70%;       
+    }; 
+    @media (max-width:35em) { 
+        width: 80%;       
+    }; 
 } 
 .photo-2{
     width: 85%;
+
+    @media (max-width:48.75em) { 
+        width: 70%;               
+    }; 
 }
 p{
-    font-size: $font-size-medium;
+    font-size: 2.1rem;
     line-height: 3.5rem;
     color: $color-main-blue;   
 }
 
 .quote{    
-    width: 45%;
+    width: 43%;
+    min-width: 48rem;
     font-family: 'Special Elite', cursive;    
     line-height: 3.5rem;
+
+    @media (max-width:49.75em) { 
+        width: 90%;
+        margin-bottom: 1rem;
+    }; 
 
     p{
         margin-top: 10rem;
         color: $color-grey-light;
+        font-size: $font-size-medium;
+
+        @media (max-width:49.75em) { 
+            margin-top: 5rem;
+        }; 
     }
 }
 
@@ -47,45 +120,100 @@ p{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    
     ul{
         display: block;
         width: 100%;
         list-style: none;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        flex-wrap: wrap;
         li{
+            width: 25%;
+            min-width: 190px;
             display: inline-block;
-            font-size: $font-size-medium; 
+            font-size: $font-size-medium;           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
             
-            .icon-block{
+            &:not(:last-child){
+                border-right: 2px solid black;
 
-                width: 22rem;
-                height: 20rem;
-                border: 2px solid $color-main-blue;
-                border-radius: 5px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                padding:1rem;
-
-                .icon{
-                    width: 10rem;
-                    height: auto;
-                    margin-top: 1rem;
-                }
-                .icon-text{
-                    text-align: center;
-                }
-            }
+                @media (max-width:52.75em) { 
+                    border-right:none;
+                }; 
+            }            
         }
     }
 }
 
+.icon-block{
+
+    width: 22rem;
+    height: 20rem;
+    border: 2px solid $color-main-blue;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:1rem;
+    transition: all .3s;
+
+    &:hover{
+        transform: translateY(-10px);
+    }
+
+    .icon{
+        width: 10rem;
+        height: auto;
+        margin-top: 1rem;
+
+        &-big{
+            width: 13rem;
+        }
+    }
+   
+}
 
 
+.text-for-icon{
+   width: 100%;
+   padding: 1rem .5rem;
+   text-align: center;
+}
 
 
+.headings{
+    width: 95%;    
 
+    @media (max-width:32em) { 
+        font-size: 1.8rem;        
+    }; 
+    @media (max-width:20em) { 
+        width: 90%;           
+    };
+    
+    h3{
+        display: block;
+        @media (max-width:30em) { 
+            text-align: center;
+           
+        }; 
+    }
+}
+.small{
+    @media (max-width:30em) { 
+        font-size: $font-size-medium;
+    }; 
+}
+.final{
 
+    h3{
+        @media (max-width:30em) { 
+            text-align: center;
+        }; 
+    }    
+}

@@ -1,0 +1,31 @@
+<form class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form__heading">
+        <h2>
+            Реєстрація на курс {{course.lenguage}} {{course.level}}
+        </h2>
+    </div>
+
+    <div class="form__group">
+        <input id="name" type="text" class="form__input" placeholder="Ім'я" formControlName="name">
+        <label for="name" class="form__label">Ім'я</label>                                    
+    </div>
+    <div class="form__group">
+        <input id="lastname" type="text" class="form__input" placeholder="Прізвище" formControlName="lastname">
+        <label for="lastname" class="form__label">Прізвище</label>                                    
+    </div>
+    <div class="form__group">
+        <input id="email" type="email" class="form__input" placeholder="Електронна пошта" formControlName="email">
+        <label for="email" class="form__label">Електронна пошта</label>                                    
+    </div>
+    <div class="form__group">
+        <input id="number" type="text" class="form__input" placeholder="Номер телефону" formControlName="number" prefix="+38" mask="(000) 000 00 00">
+        <label for="number" class="form__label">Номер телефону</label>                                    
+    </div>
+    
+
+    <div class="form__group">
+        <div class="button-container">
+            <button class="btn" type="submit" [disabled]="form.invalid" [class.disabled]="form.invalid">Надіслати</button>           
+        </div> 
+    </div>
+</form>

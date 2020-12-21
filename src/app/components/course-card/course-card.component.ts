@@ -7,12 +7,30 @@ import { Course } from '../../interfaces/course.interface'
   styleUrls: ['./course-card.component.scss']
 })
 export class CourseCardComponent implements OnInit {
+
+  popupOpen = false
+  translate
+  transform
   
   @Input()course:Course
+  @Input()index
 
   constructor() { }
 
-  ngOnInit(): void {
+  onPopupOpen(){
+    this.popupOpen = true
   }
+  onPopupClose($event){
+    this.popupOpen = false
+  }
+
+  ngOnInit(): void {
+    this.translate = `${(this.index % 3)*30}px`    
+    this.transform = {
+      'transform': `skewY(5deg) translateY(${this.translate})`
+    }
+  }
+
+
   
 }

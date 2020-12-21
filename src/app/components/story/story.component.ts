@@ -8,7 +8,7 @@ import {Story} from '../../interfaces/story.interface'
 })
 export class StoryComponent implements OnInit {
 
-  @Input()story:Story
+  @Input()story:Story 
 
   constructor() { }
 

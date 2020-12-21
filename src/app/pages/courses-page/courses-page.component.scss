@@ -4,13 +4,11 @@
     margin-top: -20rem;
     background-color: $color-grey-light;
     .heading{
-        padding-top: 28rem;
-        h1{
-            color: $color-main-dark;
-            font-family: 'Varela Round', sans-serif;
-            font-size: 5rem;
-            font-weight: 500;
-        }
+        padding-top: 28rem; 
+
+        @media (max-width:30em) {        
+            padding-top: 24rem;  
+        };   
     }
     .row{        
         width: 100%;          
@@ -27,4 +25,25 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    @media (max-width:37.5em) { 
+        width: 100%;   
+        justify-content: flex-start;    
+    };  
+    .accordeon-block{
+        @media (max-width:37.5em) { 
+            width: 87%;            
+        };
+        @media (max-width:25.8em) {        
+            width: 90%;  
+        };
+        @media (max-width:24.9em) {        
+            width: 92%;  
+        };      
+    }
+}
+.courses{
+    @media (max-width:30em) {        
+        margin-top: 2rem;  
+    };  
 }

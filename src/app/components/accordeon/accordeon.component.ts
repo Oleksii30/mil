@@ -19,10 +19,10 @@ import {
        'max-height':'0',         
       })),
       state('end', style({
-        'max-height':'18rem',        
+        'max-height':'24rem',        
       })),
       transition('start <=> end', [
-        animate('1s ease-in')
+        animate('.5s ease-in')
       ])
     ]),
     trigger('accordeonO', [
@@ -44,7 +44,7 @@ import {
         transform:'rotate(180deg)',        
        })),
        transition('start <=> end', [
-         animate('1s ease-in')
+         animate('.5s ease-in')
        ])
     ])
   ]
@@ -55,11 +55,15 @@ export class AccordeonComponent implements OnInit {
   accOpacityState:string = 'start'  
 
   @Input()question:Question
+  @Input()index
+
+  delay:string  
 
   constructor() { }
 
   ngOnInit(): void { 
-    
+    this.index = this.index+2
+    this.delay = `0.${this.index}s`
   }
 
   open(){  

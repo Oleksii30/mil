@@ -18,7 +18,7 @@ export class CoursesService {
   }
 
   getCoursesFromServer(){
-    this.http.get('http://localhost:3000/courses').subscribe((courses:Array<Course>) => {
+    this.http.get('https://mil-pasos.herokuapp.com/courses').subscribe((courses:Array<Course>) => {
       this.courses = courses
       this.coursesSub.next([...this.courses])
     })

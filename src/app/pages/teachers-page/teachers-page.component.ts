@@ -10,7 +10,19 @@ import { Subscription } from 'rxjs';
 })
 export class TeachersPageComponent implements OnInit, OnDestroy {
 
-  teachers:Array<Teacher>
+  teachers:Array<Teacher> = new Array(2).fill({
+    name: '',
+    description:'',
+    avatar:{
+        first:'',
+        second:'',
+        third:'',
+    },    
+    header:'',
+    quote:''
+  }) 
+  
+    
   teachersSub:Subscription
 
   constructor( private teacherService: TeachersService ) { }
@@ -19,8 +31,7 @@ export class TeachersPageComponent implements OnInit, OnDestroy {
     this.teacherService.getTeachersFromServer()
     this.teachersSub = this.teacherService.getTeachers.subscribe((teachers:Array<Teacher>)=>{
       this.teachers = teachers.map(teacher => ({...teacher, description: teacher.description.split('//')})) 
-      console.log(this.teachers);
-           
+                 
     })
   } 
   

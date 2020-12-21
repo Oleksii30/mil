@@ -1,34 +1,39 @@
-
-<div class="card-container">
-    <div class="header">
-        <div class="header__picture" 
-        [class.header__picture--sp-a1]="course.lenguage == 'Іспанська' && course.level == 'A1'"
-        [class.header__picture--en-a1]="course.lenguage == 'Англійська' && course.level == 'A1'"
-        [class.header__picture--sp-a2]="course.lenguage == 'Іспанська' && course.level == 'A2'"
-        [class.header__picture--en-a2]="course.lenguage == 'Англійська' && course.level == 'A2'"
-        [class.header__picture--sp-b1]="course.lenguage == 'Іспанська' && course.level == 'B1'"
-        [class.header__picture--en-b1]="course.lenguage == 'Англійська' && course.level == 'B1'"
-        [class.header__picture--sp-b2]="course.lenguage == 'Іспанська' && course.level == 'B2'"
-        [class.header__picture--en-b2]="course.lenguage == 'Англійська' && course.level == 'B2'"
-        >
-            &nbsp;
+<div class="background" [ngStyle]="transform">
+    <div class="card-container">
+        <div class="header">
+            <div class="header__picture" 
+            [class.header__picture--sp-a1]="course.lenguage == 'Іспанська' && course.level == 'A1'"
+            [class.header__picture--en-a1]="course.lenguage == 'Англійська' && course.level == 'A1'"
+            [class.header__picture--sp-a2]="course.lenguage == 'Іспанська' && course.level == 'A2'"
+            [class.header__picture--en-a2]="course.lenguage == 'Англійська' && course.level == 'A2'"
+            [class.header__picture--sp-b1]="course.lenguage == 'Іспанська' && course.level == 'B1'"
+            [class.header__picture--en-b1]="course.lenguage == 'Англійська' && course.level == 'B1'"
+            [class.header__picture--sp-b2]="course.lenguage == 'Іспанська' && course.level == 'B2'"
+            [class.header__picture--en-b2]="course.lenguage == 'Англійська' && course.level == 'B2'"
+            >
+                &nbsp;
+            </div>
+            <div class="header__level" 
+            [class.header__level--sp]="course.lenguage == 'Іспанська'"
+            [class.header__level--en]="course.lenguage == 'Англійська'"
+            >
+                {{course.level}}
+            </div>
         </div>
-        <div class="header__level" 
-        [class.header__level--sp]="course.lenguage == 'Іспанська'"
-        [class.header__level--en]="course.lenguage == 'Англійська'"
-        >
-            {{course.level}}
-        </div>
+            <div class="course-info">
+                <ul>
+                    <li>{{course.description}}</li>
+                    <li>{{course.price}}</li>
+                    <li>{{course.duration}}</li>
+                </ul>
+            </div>
+            <div class="button-container">
+                <a class="btn" (click)="onPopupOpen()">Зареєструватись на курс</a>           
+            </div>               
     </div>
-        <div class="course-info">
-            <ul>
-                <li>{{course.description}}</li>
-                <li>{{course.price}}</li>
-                <li>{{course.duration}}</li>
-            </ul>
-        </div>
-        <div class="button-container">
-            <a class="btn" href="/">Зареєструватись на курс</a>
-        </div>         
 </div>
 
+
+<app-popup [popupOpen]="popupOpen" (onClose)="onPopupClose($event)">
+    <app-form [course]="course" (closePopup)="onPopupClose($event)"></app-form>
+</app-popup> 

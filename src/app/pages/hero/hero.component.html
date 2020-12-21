@@ -1,15 +1,42 @@
 <app-header [animations]="finishedLoading"></app-header>
-<div class="main-container">
-    <img src="{{mainImageUrl}}" alt="main-image" (load)="onImageLoad()"> 
+<div class="main-container" id="hero">
+    <img class="main-img" src="{{mainImageUrl}}" alt="main-image" (load)="onImageLoad()"> 
     <div class="bg-gradient">
         <div class="headers">
             <h1> Mil pasos</h1>
             <p> Студія іноземних мов</p>
+        </div>       
+        <div class="bird bird-2" >
+            <img src="https://lh3.googleusercontent.com/gl6GX3VzkY0Hqxd9xuXKLPqfznUkC5JiSq0Lcirtuh_owR6OJT3xulLeyhxGlr-MH86bu3fmpce08tjL65vn8f1BmvqPE0kpiCnbCKfBg2rD-IO92Y23dWJtKHvgYanlUZKbNvtX0w=s250-p-k" alt="bird-2">
         </div>
-        <div class="icons">
-            <div class="icon">
-                <app-fb-icon></app-fb-icon>
+        <div class="bird bird-3">
+            <img src="https://lh3.googleusercontent.com/UFH8Z0eI4PWJwXdO22GmVKGedsVKpg9zEZ4MXenb1SlbwtSqR4fVVtwLPFgpjkqAZjN2OmFri1ewUuxWzO10BVYdHvIWm_wLCRcOHX0y7drau2n553YJ34-5Sdj__amm5Z9EmL3gOQ=s250-p-k" alt="bird-3">
+        </div>
+
+        <div class="bird bird-4" >
+            <img src="https://lh3.googleusercontent.com/ttoGX6aaaZJrFllRT9xmhlY8dJleDQzQ2Yp4e0e14_tbIwqoOPFwvcFkjce6eUnduzQe2bWHUmortQA9JdZcw0Duo76yIXxkql-Br6Q_mfU6kIFPP0DvoJFEHKGqJeu7d4b9OmQqVg=s250-p-k" alt="bird-4">
+        </div>
+        <div class="bird bird-5" > 
+            <img src="https://lh3.googleusercontent.com/7UB32W81V4FKatzMiWO-iw1oFQFZ5OcX6DGB45lr8Eljel0cfWGBzddDZ4RQvd4IkNsuX5Nlirhd1-Vs7GrzrTo8S793t4OWAT-rNPhgQqVbQHEXyZmM7NJ4qvMnAvOjwvXnomdwew=s250-p-k" alt="bird-5">
+        </div>
+        <div class="books">
+            <div class="books-2">
+                <img src="https://raw.githubusercontent.com/Oleksii30/photos/main/books.webp" alt="books-2">
             </div>
+            <div class="books-1">
+                <img src="https://lh3.googleusercontent.com/hqFOT8yubkJ1VQUt2UUrbxtqaoN77vXUp5Y7Hdc1tTmGNj9R7YkSHYgQSWWpSvlmNIbdYWZVe2UNaQMBffAVJB8GNhHhLGteTcHaN-ePfqEYyCtC3UL_8tDnKS-Mu97MhVmBBpWiHQ=w2400" alt="books-1">
+            </div>
+            
+        </div>
+        <div class="girl">
+            <img src="https://lh3.googleusercontent.com/PCipLvLnQfI9hO4SJANXp69uIZoj5FPYoGjiR1N0eP04AVFyuDDZEA8Dd24kBghN14-hhIJtc-9rJp72zB4DA8SEDGukdRyQsbhxduCG80rdK3G--DAvJ7vgESt4J4owpzT2VhkSpw=w2400" alt="girl">
+        </div>       
+        
+        <div class="icons">           
+                <div class="icon">                   
+                    <app-fb-icon></app-fb-icon>                   
+                </div>            
+            
             <div class="icon">
                 <app-insta-icon></app-insta-icon>
             </div>

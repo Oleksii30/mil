@@ -3,7 +3,7 @@
     
     <div class="row">
         <div class="col-8 teacher-block u-padding-bottom-medium">
-            <div class="row">
+            <div class="row ">
                 <div class="heading-container">
                     <div class="heading-content">
                         <h1>{{teacher.name}}</h1>
@@ -11,24 +11,24 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-5">                                     
+            <div class="row content">
+                <div class="col-5 img" *ngIf="teacher.avatar.first">                                     
                     <img src="{{teacher.avatar.first}}" alt="first-photo" appScrollAnimation eleAnimation="slide_in_bottom" >
                 </div>
                 <div class="col-5">
                     <p appScrollAnimation eleAnimation="slide_in_bottom" delay='0.3s'>{{teacher.description[0]}}</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row content-rew">
                 <div class="col-5">
                     <p appScrollAnimation eleAnimation="slide_in_bottom" delay='0.3s'>{{teacher.description[1]}}</p>                
                 </div>
-                <div class="col-4">
+                <div class="col-4 img not-mobile" *ngIf="teacher.avatar.second">
                     <img src="{{teacher.avatar.second}}" alt="second-photo" appScrollAnimation eleAnimation="slide_in_bottom" delay='0.1s'>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-5">
+            <div class="row content">
+                <div class="col-5 img not-mobile" *ngIf="teacher.avatar.third">
                     <img src="{{teacher.avatar.third}}" alt="third-photo" appScrollAnimation eleAnimation="slide_in_bottom" delay='0.1s'>
                 </div>
                 <div class="col-5">
